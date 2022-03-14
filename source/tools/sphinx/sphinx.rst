@@ -15,6 +15,14 @@ Sphinx 简介
 
 .. code:: shell
 
+  # 使用虚拟环境
+  # ubuntu
+  # sudo pip3 install virtualenv
+  cd doc
+  virtualenv doc
+  pip install sphinx
+  pip install sphinx_rtd_theme
+
   # Sphinx
   pip install Sphinx
 
