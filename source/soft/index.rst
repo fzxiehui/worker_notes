@@ -4,3 +4,4 @@
 .. toctree::
   
   cmake/index.rst
+  python/index.rst
