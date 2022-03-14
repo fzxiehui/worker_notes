@@ -4,7 +4,8 @@
 
 ```shell
 
-# pip3 install virtualenv
+# ubuntu
+# sudo pip3 install virtualenv
 $ virtualenv doc
 
 $ source doc/bin/activate
@@ -13,6 +14,6 @@ $ pip install -r requirements.txt
 # or 
 $ pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple
 
-# ./doc_build.sh run
+$ ./doc_build.sh run
 
 ```
