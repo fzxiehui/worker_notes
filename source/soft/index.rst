@@ -5,3 +5,4 @@
   
   cmake/index.rst
   python/index.rst
+  golang/index.rst
