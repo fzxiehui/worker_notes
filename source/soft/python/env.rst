@@ -1,6 +1,10 @@
 Python 虚拟环境
 ===============
 
+.. warning::
+  
+  以下示例系统环境为 Ubuntu 1840
+
 安装
 ------
 
@@ -17,9 +21,14 @@ Python 虚拟环境
 
 .. code:: shell
 
+   # 进入项目目录
    cd project
-   virtualenv project_env
-   source project_env/bin/virtualenv
+
+   # 创建虚拟环境
+   virtualenv env
+
+   # 激活虚拟环境
+   source env/bin/activate
 
 
 查看pip安装库信息
@@ -29,9 +38,9 @@ Python 虚拟环境
 
    pip freeze
 
+
 取消激活
 --------
-
 
 .. code:: shell
 
