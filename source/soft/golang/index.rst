@@ -5,3 +5,4 @@ Golang
   :numbered:
 
   install.rst
+  base.rst
