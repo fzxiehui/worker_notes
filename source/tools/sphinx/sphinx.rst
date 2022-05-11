@@ -9,6 +9,7 @@ Sphinx 简介
     - ``https://sphinx-themes.org/`` 主题
     - ``https://readthedocs.org/`` 文档托管
     - ``http://pandoc.org/try/`` markdown 转 reSrtuctuerdText
+    - ``http://zhk.me/861.html`` sphinx plantuml
 
 安装
 ----
@@ -22,12 +23,17 @@ Sphinx 简介
   virtualenv doc
   pip install sphinx
   pip install sphinx_rtd_theme
+  pip install sphinxcontrib-plantuml
 
+  # 使用全局环境
   # Sphinx
-  pip install Sphinx
+  sudo pip install Sphinx
 
   # 主题
-  pip install sphinx-rtd-theme
+  sudo pip install sphinx-rtd-theme
+  
+  # uml
+  sudo pip install sphinxcontrib-plantuml
 
 创建文档
 --------
@@ -47,6 +53,30 @@ Sphinx 简介
   # html_theme = 'alabaster'
   html_theme = 'sphinx_rtd_theme'
 
+添加plantuml
+-------------
+
+#. 修改conf文件
+
+   .. code:: python
+    
+     extensions = ['sphinxcontrib.plantuml']
+
+     ## -jar 包必需是绝对路径
+     plantuml = 'java -jar /home/hello/plantuml.jar'
+
+#. 使用示例
+
+   .. code:: shell
+     
+     # 直接使用
+     .. uml::
+
+       Alice -> Bob: Hi!
+       Alice <- Bob: How are you?
+
+     # 引入uml文件
+     .. uml:: example.uml
 
 
 预览与生成
