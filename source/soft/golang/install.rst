@@ -3,7 +3,7 @@ Go 安装
 
 .. warning::
   
-  以下示例系统环境为 Ubuntu 1640
+  以下示例系统环境为 Ubuntu 1604
 
 .. note::
 

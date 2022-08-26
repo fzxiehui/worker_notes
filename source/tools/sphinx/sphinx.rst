@@ -20,7 +20,7 @@ Sphinx 简介
   # ubuntu
   # sudo pip3 install virtualenv
   cd doc
-  virtualenv doc
+  virtualenv venv
   pip install sphinx
   pip install sphinx_rtd_theme
   pip install sphinxcontrib-plantuml

@@ -3,7 +3,7 @@ Python 虚拟环境
 
 .. warning::
   
-  以下示例系统环境为 Ubuntu 1840
+  以下示例系统环境为 Ubuntu 1804
 
 安装
 ------

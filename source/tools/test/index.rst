@@ -5,4 +5,5 @@
   :numbered:
 
   iperf.rst
+  mqtt.rst
   
