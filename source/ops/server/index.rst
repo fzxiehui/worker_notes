@@ -1,5 +1,8 @@
 服务搭建维护
 =============
 
-.. .. toctree::
+.. toctree::
+   :numbered:
+
+   mysql.rst
   

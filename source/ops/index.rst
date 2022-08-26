@@ -3,5 +3,5 @@
 
 .. toctree::
   
-  server/index.rst
   init/index.rst
+  server/index.rst

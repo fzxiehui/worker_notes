@@ -13,6 +13,7 @@
   board/index.rst
   tools/index.rst
   soft/index.rst
+  ops/index.rst
 
 
 Indices and tables
