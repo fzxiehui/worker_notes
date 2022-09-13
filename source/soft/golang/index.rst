@@ -20,3 +20,4 @@ Gin
   ginfunc.rst
   ginbind.rst
   ginfile.rst
+  ginrouter.rst
