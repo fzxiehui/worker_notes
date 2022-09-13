@@ -19,7 +19,7 @@ Go 安装
 .. code:: shell
 
    cd ~
-   curl -O https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz
+   wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
 
 
 安装
@@ -27,7 +27,7 @@ Go 安装
 
 .. code:: shell
 
-   tar xvf go1.6.linux-amd64.tar.gz
+   tar xvf go1.19.1.linux-amd64.tar.gz
    sudo chown -R root:root ./go
    sudo mv go /usr/local
 
