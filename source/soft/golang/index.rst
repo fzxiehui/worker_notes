@@ -17,3 +17,6 @@ Gin
   :numbered:
 
   hellogin.rst
+  ginfunc.rst
+  ginbind.rst
+  ginfile.rst
