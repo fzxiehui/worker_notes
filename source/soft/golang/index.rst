@@ -21,3 +21,4 @@ Gin
   ginbind.rst
   ginfile.rst
   ginrouter.rst
+  orm.rst
