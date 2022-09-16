@@ -23,7 +23,7 @@ Systemctl 示例
    sudo systemctl enable <服务名称>
 
 
-rpc
+frp
 -----------
 
 - 服务端
