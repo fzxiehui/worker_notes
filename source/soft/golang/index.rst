@@ -22,3 +22,4 @@ Gin
   ginfile.rst
   ginrouter.rst
   orm.rst
+  jwt.rst
