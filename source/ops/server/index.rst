@@ -5,4 +5,5 @@
    :numbered:
 
    mysql.rst
+   emqx.rst
   
