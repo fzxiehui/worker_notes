@@ -1,8 +1,8 @@
 EMQx
 ======
 
-zft 
------------
+docker-compose
+--------------------
 
 
 .. code:: yaml
