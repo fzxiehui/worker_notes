@@ -18,7 +18,7 @@ Hello CMake
  - 安装 ``CMake-gui 3.10 +``
 
 编写CMakeLists.txt文件
----------------------
+----------------------------
 
 .. code:: shell
 

@@ -7,8 +7,16 @@ Golang Basics
 .. toctree::
   :numbered:
 
-  install.rst
-  base.rst
+  base/install.rst
+  base/base.rst
+
+GOF 
+--------------
+
+.. toctree::
+  :numbered:
+
+  gof/gof.rst
 
 Gin
 ----
@@ -16,10 +24,10 @@ Gin
 .. toctree::
   :numbered:
 
-  hellogin.rst
-  ginfunc.rst
-  ginbind.rst
-  ginfile.rst
-  ginrouter.rst
-  orm.rst
-  jwt.rst
+  gin/hellogin.rst
+  gin/func.rst
+  gin/bind.rst
+  gin/file.rst
+  gin/router.rst
+  gin/orm.rst
+  gin/jwt.rst
