@@ -17,6 +17,7 @@ GOF
   :numbered:
 
   gof/gof.rst
+  gof/factory.rst
 
 Gin
 ----

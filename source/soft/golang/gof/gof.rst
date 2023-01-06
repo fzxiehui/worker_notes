@@ -20,25 +20,83 @@ GOF设计原则
 
     import "fmt"
 
-    type ClothesShop struct{}
+    type ClothesShop struct {}
 
-    func (c *ClothesShop) onShop() {
-      fmt.Println("onShop")
+    func (cs *ClothesShop) OnShop() {
+      fmt.Println("休闲的装扮")
     }
 
-    type ClothesWork struct{}
+    type ClothesWork struct {}
 
-    func (c *ClothesWork) onWork() {
-      fmt.Println("onWork")
+    func (cw *ClothesWork) OnWork() {
+      fmt.Println("工作的装扮")
     }
 
     func main() {
-      fmt.Println("shop")
-      shop := &ClothesShop{}
-      shop.onShop()
+      //工作的时候
+      cw := new(ClothesWork)
+      cw.OnWork()
 
-      fmt.Println("work")
-      work := &ClothesWork{}
-      work.onWork()
+      //shopping的时候
+      cs := new(ClothesShop)
+      cs.OnShop()
     }
 
+
+开闭原则
+----------------
+
+.. code-block:: golang
+  :emphasize-lines: 5-8
+
+  package main
+
+  import "fmt"
+
+  //抽象的银行业务员
+  type AbstractBanker interface{
+    DoBusi()	//抽象的处理业务接口
+  }
+
+  //存款的业务员
+  type SaveBanker struct {
+    //AbstractBanker
+  }
+
+  func (sb *SaveBanker) DoBusi() {
+    fmt.Println("进行了存款")
+  }
+
+  //转账的业务员
+  type TransferBanker struct {
+    //AbstractBanker
+  }
+
+  func (tb *TransferBanker) DoBusi() {
+    fmt.Println("进行了转账")
+  }
+
+  //支付的业务员
+  type PayBanker struct {
+    //AbstractBanker
+  }
+
+  func (pb *PayBanker) DoBusi() {
+    fmt.Println("进行了支付")
+  }
+
+
+  func main() {
+    //进行存款
+    sb := &SaveBanker{}
+    sb.DoBusi()
+
+    //进行转账
+    tb := &TransferBanker{}
+    tb.DoBusi()
+    
+    //进行支付
+    pb := &PayBanker{}
+    pb.DoBusi()
+
+  }

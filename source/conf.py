@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'worker_notes'
+project = '民工笔记'
 copyright = '2022, fzxiehui'
 author = 'fzxiehui'
 
