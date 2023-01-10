@@ -1,4 +1,4 @@
-服务搭建维护
+服务搭建
 =============
 
 .. toctree::
@@ -6,4 +6,5 @@
 
    mysql.rst
    emqx.rst
+   redis.rst
   

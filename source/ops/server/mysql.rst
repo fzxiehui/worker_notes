@@ -1,9 +1,9 @@
 .. _mysql:
 
-MySqld
+MySQL
 ======
 
-docker-compose
+基础配置
 ---------------
 
 .. code:: yaml

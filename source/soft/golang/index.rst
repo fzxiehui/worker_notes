@@ -10,6 +10,15 @@ Golang Basics
   base/install.rst
   base/base.rst
 
+Redis
+--------------
+
+.. toctree::
+  :numbered:
+
+  redis/helloredis.rst
+
+
 GOF 
 --------------
 
