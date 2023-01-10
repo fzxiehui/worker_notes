@@ -5,6 +5,8 @@ Hello Redis
 
     快速部署 :ref:`Redis Docker<redis>`
 
+    docs: `Go Redis <https://redis.uptrace.dev/>`_
+
     gh: https://github.com/go-redis/redis
 
     可视化工具:
