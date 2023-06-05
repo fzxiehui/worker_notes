@@ -23,6 +23,10 @@ nvim环境搭建
 安装依赖
 -----------------
 
+.. attention:: 
+
+   如果Node.js 版本过高，会导致npm安装插件失败，可以使用 ``sudo n v16.15.0`` 降低版本 
+
 .. code:: shell
 
   # install curl
@@ -483,6 +487,10 @@ coc配置文件
 
 插件安装
 -----------------
+
+.. note::
+
+   如果Go环境出现问题, 可以尝试使用 ``:GoInstallBinaries`` 命令
 
 .. code:: shell
 

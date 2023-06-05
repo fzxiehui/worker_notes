@@ -11,6 +11,7 @@
    :caption: Contents:
 
   board/index.rst
+  habit/index.rst
   tools/index.rst
   soft/index.rst
   ops/index.rst
