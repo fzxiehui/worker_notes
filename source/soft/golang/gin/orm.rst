@@ -12,6 +12,99 @@ ORM
 
 .. code:: go
 
+    // TODO
+
+    // 取出最后创建的10个用户
+    var users []User
+    // Limit 指定要查询的最大记录数
+    db.Order("created_at desc").Limit(10).Find(&users)
+
+    // Offset 指定要跳过的记录数
+    db.Offset(10).Find(&users)
+
+    // Offset 需要配合 Limit 使用
+    db.Offset(10).Limit(10).Find(&users)
+    db.Offset(10).Limit(10).Order("created_at desc").Find(&users)
+
+    // Count 统计记录数
+    var count int64
+    db.Model(&User{}).Count(&count)
+
+    // Select 指定要查询的字段
+    db.Select("name, age").Find(&users)
+
+    // Where 指定查询条件
+    db.Where("name = ?", "靓仔").Find(&users)
+    // 统计叫靓仔的人数
+    db.Model(&User{}).Where("name = ?", "靓仔").Count(&count)
+
+    // 分页
+    var users []User
+    var page int = 1
+    var pageSize int = 10
+    db.Offset((page - 1) * pageSize).Limit(pageSize).Find(&users)
+
+    // 分页查找最后创建的10个用户
+    var users []User
+    var page int = 1
+    var pageSize int = 10
+    db.Order("created_at desc").Offset((page - 1) * pageSize).Limit(pageSize).Find(&users)
+
+
+    // 分页查找 name 为 靓仔 的用户
+    var users []User
+    var page int = 1
+    var pageSize int = 10
+    db.Where("name = ?", "靓仔").Offset((page - 1) * pageSize).Limit(pageSize).Find(&users)
+
+    // 分页查找 name 为 靓仔 的用户，按照创建时间倒序
+    var users []User
+    var page int = 1
+    var pageSize int = 10
+    db.Where("name = ?", "靓仔").Order("created_at desc")
+      .Offset((page - 1) * pageSize).Limit(pageSize).Find(&users)
+
+    // 查找 今天 创建的用户
+    var users []User
+    db.Where("created_at >= ?", time.Now().Format("2006-01-02")).Find(&users)
+
+    // 查找 今天 创建的用户，按照创建时间倒序
+    var users []User
+    db.Where("created_at >= ?", time.Now().Format("2006-01-02")).Order("created_at desc").Find(&users)
+
+    // 查找 今天 创建的用户，按照创建时间倒序，分页
+    var users []User
+    var page int = 1
+    var pageSize int = 10
+    db.Where("created_at >= ?", time.Now().Format("2006-01-02"))
+      .Order("created_at desc").Offset((page - 1) * pageSize).Limit(pageSize).Find(&users)
+
+
+    // 查找 开始时间到结束时间 创建的用户
+    var users []User
+    var startTime string = "2020-01-01"
+    var endTime string = "2020-01-02"
+    db.Where("created_at >= ? AND created_at <= ?", startTime, endTime).Find(&users)
+
+
+    // 查找 开始时间到结束时间 创建的用户, 精确到秒
+    var users []User
+    var startTime string = "2020-01-01 00:00:00"
+    var endTime string = "2020-01-02 00:00:00"
+    db.Where("created_at >= ? AND created_at <= ?", startTime, endTime).Find(&users)
+
+
+    // 分页查找 开始时间到结束时间 创建的用户, 精确到秒
+    var users []User
+    var page int = 1
+    var pageSize int = 10
+    var startTime string = "2020-01-01 00:00:00"
+    var endTime string = "2020-01-02 00:00:00"
+    db.Where("created_at >= ? AND created_at <= ?", startTime, endTime)
+      .Order("created_at desc").Offset((page - 1) * pageSize).Limit(pageSize).Find(&users)
+
+.. code:: go
+
     package main
 
     import (
