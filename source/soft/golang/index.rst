@@ -41,3 +41,11 @@ Gin
   gin/router.rst
   gin/orm.rst
   gin/jwt.rst
+
+Wails
+-------------------------
+
+.. toctree::
+   :numbered:
+
+   wails/install.rst
