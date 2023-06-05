@@ -1,6 +1,13 @@
 ubuntu 个性设置
 ==================
 
+五笔输入法安装
+------------------
+
+.. code-block:: bash
+
+    sudo apt-get install fcitx fcitx-table-wbpy
+
 改键
 ------------------
 
