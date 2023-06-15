@@ -6,9 +6,9 @@
 
 # ubuntu
 # sudo pip3 install virtualenv
-$ virtualenv doc
+$ virtualenv venv
 
-$ source doc/bin/activate
+$ source venv/bin/activate
 
 $ pip install -r requirements.txt
 # or 
